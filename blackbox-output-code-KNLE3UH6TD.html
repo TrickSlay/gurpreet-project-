@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Chaos to Clarity</title>
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(0, 230, 118, 0.1) 0%, transparent 50%), 
+                radial-gradient(circle at 70% 60%, rgba(13, 71, 161, 0.1) 0%, transparent 50%), 
+                linear-gradient(135deg, #0d47a1 0%, #ffffff 50%, #00e676 100%); 
+            color: #333; 
+            position: relative; 
+            overflow-x: hidden; 
+        }
+        body::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: 
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 20px), 
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 20px); 
+            pointer-events: none; 
+        }
+        body::after { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%2300e676"/><path d="M50 50 L60 40 L70 50 L60 60 Z" stroke="%2300e676" stroke-width="0.5" fill="none"/><path d="M30 30 L40 20 L50 30 L40 40 Z" stroke="%2300e676" stroke-width="0.5" fill="none"/></svg>') repeat; 
+            opacity: 0.1; 
+            animation: innovate 15s linear infinite; 
+            pointer-events: none; 
+        }
+        @keyframes innovate { 
+            0% { transform: translateX(0); } 
+            100% { transform: translateX(100px); } 
+        }
+        header { background: rgba(13, 71, 161, 0.95); color: white; padding: 20px; text-align: center; position: relative; z-index: 1; box-shadow: 0 0 20px rgba(0, 230, 118, 0.5); }
+        nav { margin-top: 10px; }
+        nav a { color: #00e676; margin: 0 15px; text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: white; text-shadow: 0 0 10px #00e676; }
+        .hero { background: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80') no-repeat center; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); position: relative; z-index: 1; }
+        .hero h1 { font-size: 3em; text-shadow: 0 0 20px #00e676; }
+        .section { padding: 40px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; background: rgba(255, 255, 255, 0.95); border-radius: 10px; margin-bottom: 20px; box-shadow: 0 0 15px rgba(13, 71, 161, 0.2); }
+        .section h2 { color: #0d47a1; border-bottom: 2px solid #00e676; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid transparent; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 230, 118, 0.3); border-color: #00e676; }
+        .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; transition: transform 0.3s; }
+        .card img:hover { transform: scale(1.05); }
+        .sponsors { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .sponsor { width: 150px; height: 100px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; margin: 10px; }
+        footer { background: rgba(13, 71, 161, 0.95); color: white; text-align: center; padding: 20px; position: relative; z-index: 1; box-shadow: 0 0 20px rgba(0, 230, 118, 0.5); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>From Chaos to Clarity</h1>
+        <nav>
+            <a href="#courses">Courses</a>
+            <a href="#syllabus">Syllabus</a>
+            <a href="#evaluation">Evaluation</a>
+            <a href="#specialities">Specialities</a>
+            <a href="#fees">Fees</a>
+            <a href="#faculty">Faculty</a>
+            <a href="#contact">Contact</a>
+            <a href="#sponsors">Sponsors</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div style="text-align: center;">
+            <h1>Innovate from Chaos to Clarity</h1>
+            <p>Master Design Thinking with cutting-edge tech tools.</p>
+            <button onclick="window.open('https://docs.google.com/forms/d/1dMVTd3DFN2GwZGHi8lZcFbkm0edPgI9GueyNi3enhnA/viewform', '_blank');" style="padding: 10px 20px; background: #00e676; color: #0d47a1; border: none; border-radius: 5px; box-shadow: 0 0 10px #00e676;">Enroll Now</button>
+        </div>
+    </section>
+    <section id="courses" class="section">
+        <h2>Course Outline</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=150&q=80" alt="Empathy Mapping Illustration">
+                <h3>Empathize and Define</h3>
+                <p>Understand user needs with tech-driven research tools.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=150&q=80" alt="Prototyping Tools">
+                <h3>Ideate and Prototype</h3>
+                <p>Generate ideas using AI and build digital prototypes.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=150&q=80" alt="Iteration Cycle">
+                <h3>Test and Iterate</h3>
+                <p>Refine designs with data analytics and feedback loops.</p>
+            </div>
+        </div>
+    </section>
+    <section id="syllabus" class="section">
+        <h2>Syllabus</h2>
+        <ul>
+            <li><strong>Module 1: Empathize (Weeks 1-2)</strong> – User research with digital surveys, observation via apps, empathy mapping on virtual boards. <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=100&q=80" alt="User Research" style="float: right; margin-left: 10px;"></li>
+            <li><strong>Module 2: Define (Weeks 3-4)</strong> – Problem framing using data visualization, point-of-view statements with NLP tools, user personas via AI. <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=100&q=80" alt="Data Visualization" style="float: right; margin-left: 10px;"></li>
+            <li><strong>Module 3: Ideate (Weeks 5-6)</strong> – Brainstorming with collaborative platforms, creative thinking tools like mind-mapping software, idea selection via voting apps. <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=100&q=80" alt="Brainstorming" style="float: right; margin-left: 10px;"></li>
+            <li><strong>Module 4: Prototype (Weeks 7-8)</strong> – Low-fidelity prototyping with Figma/Miro, wireframing for apps/websites, rapid experimentation with code snippets. <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=100&q=80" alt="Wireframing" style="float: right; margin-left: 10px;"></li>
+            <li><strong>Module 5: Test (Weeks 9-10)</strong> – User testing via remote tools, feedback loops with analytics, iteration cycles using version control. <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=100&q=80" alt="User Testing" style="float: right; margin-left: 10px;"></li>
+            <li><strong>Final Project (Weeks 11-12)</strong> – Apply Design Thinking to a tech innovation challenge, e.g., app design. <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=100&q=80" alt="Innovation Project" style="float: right; margin-left: 10px;"></li>
+        </ul>
+    </section>
+    <section id="evaluation" class="section">
+        <h2>Evaluation Criteria</h2>
+        <p>Assessments include quizzes (30%), assignments (40%), and final project (30%). Pass with 70% or higher.</p>
+    </section>
+    <section id="specialities" class="section">
+        <h2>Specialities</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>AI-Powered Coaching</h3>
+                <p>Personalized sessions with tech assistants.</p>
+            </div>
+            <div class="card">
+                <h3>Interactive Tech Tools</h3>
+                <p>Virtual whiteboards, coding sandboxes, and AR prototypes.</p>
+            </div>
+            <div class="card">
+                <h3>Innovation Community</h3>
+                <p>Forums with tech experts and peer collaborations.</p>
+            </div>
+        </div>
+    </section>
+    <section id="fees" class="section">
+        <h2>Fees Structure</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr><th>Course</th><th>Duration</th><th>Fee (INR)</th></tr>
+            <tr><td>Basic</td><td>4 weeks</td><td>1499</td></tr>
+            <tr><td>Standard</td><td>8 weeks</td><td>1999</td></tr>
+            <tr><td>Premium</td><td>12 weeks</td><td>2499</td></tr>
+        </table>
+    </section>
+    <section id="faculty" class="section">
+        <h2>Faculty</h2>
+        <div class="card">
+            <h3>Dr. Arun K Khosla</h3>
+            <p><strong>Designation:</strong> Professor</p>
+            <p><strong>Department:</strong> Electronics and Communication Engineering</p>
+            <p><strong>Qualification:</strong></p>
+            <ul>
+                <li>PhD - School of Information Technology (Guru Gobind Singh Indraprastha University Delhi)</li>
+                <li>M.Tech. - Electronics and Communication Engineering (Regional Engineering College, Kurukshetra)</li>
+                <li>B.Tech. - Electronics and Communication Engineering (Thapar Institute of Engineering and Technology Patiala)</li>
+            </ul>
+            <p><strong>Email:</strong> khoslaak@nitj.ac.in</p>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>For inquiries, reach out to us:</p>
+        <p><strong>Email:</strong> mohammedts.vl.25@nitj.ac.in | gurpreetsr.vl.25@nitj.ac.in</p>
+        <p>Phone: +91-XXXXXXXXXX (placeholder)</p>
+    </section>
+    <section id="sponsors" class="section">
+        <h2>Sponsors</h2>
+        <div class="sponsors">
+            <div class="sponsor"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80" alt="NIT Jalandhar Logo"></div>
+            <div class="sponsor"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80" alt="DesignHub Logo"></div>
+            <div class="sponsor"><img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80" alt="InnovateLabs Logo"></div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 From Chaos to Clarity. Contact: info@chaos2clarity.com | Emails: mohammedts.vl.25@nitj.ac.in, gurpreetsr.vl.25@nitj.ac.in</p>
+    </footer>
+</body>
+</html>
